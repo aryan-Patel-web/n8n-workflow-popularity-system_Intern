@@ -1,5 +1,5 @@
 import React from 'react'
-import LandingPage from './landingpage'
+import LandingPage from './Landingpage'
 
 function App() {
   return (
