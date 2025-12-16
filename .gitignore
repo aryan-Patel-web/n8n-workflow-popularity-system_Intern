@@ -1,0 +1,60 @@
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# =========================
+# Virtual environments (Python)
+# =========================
+venv/
+.venv/
+ENV/
+env/
+D:/PYTHON_LECTURE/venv/
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Jupyter / IPython
+# =========================
+.ipynb_checkpoints/
+.profile_default/
+
+# =========================
+# Build / distribution
+# =========================
+build/
+*.egg-info/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
