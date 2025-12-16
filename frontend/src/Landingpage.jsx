@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // API Configuration
-const API_BASE_URL = 'http://localhost:8000';
+// const API_BASE_URL = 'http://localhost:8000';
+// Auto-detect: localhost for development, production URL for deployment
+const API_BASE_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:8000'
+  : 'https://speakgenie-n8n-backend.onrender.com';
 
 const LandingPage = () => {
   // State Management
