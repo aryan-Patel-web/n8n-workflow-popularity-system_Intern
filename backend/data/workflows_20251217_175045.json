@@ -1,0 +1,2932 @@
+{
+  "total_workflows": 243,
+  "export_date": "2025-12-17T17:50:45.215190",
+  "data_sources": [
+    "YouTube",
+    "n8n Forum",
+    "Google Search",
+    "GitHub"
+  ],
+  "countries": [
+    "US",
+    "IN"
+  ],
+  "workflows": [
+    {
+      "workflow": "N8N Docs",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/n8n-io/n8n-docs",
+      "metrics": {
+        "views": 1329,
+        "likes": 1329,
+        "comments": 48,
+        "engagement_score": 9532.73
+      }
+    },
+    {
+      "workflow": "N8N Docs",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/n8n-io/n8n-docs",
+      "metrics": {
+        "views": 1329,
+        "likes": 1329,
+        "comments": 48,
+        "engagement_score": 9532.73
+      }
+    },
+    {
+      "workflow": "Claude Code Demo 4",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/promptadvisers/claude-code-demo-4",
+      "metrics": {
+        "views": 4,
+        "likes": 4,
+        "comments": 0,
+        "engagement_score": 8750.0
+      }
+    },
+    {
+      "workflow": "Claude Code Demo 4",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/promptadvisers/claude-code-demo-4",
+      "metrics": {
+        "views": 4,
+        "likes": 4,
+        "comments": 0,
+        "engagement_score": 8750.0
+      }
+    },
+    {
+      "workflow": "n8n ChatGPT integration",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 7959.0
+      }
+    },
+    {
+      "workflow": "n8n OpenAI workflow",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 5465.299999999999
+      }
+    },
+    {
+      "workflow": "n8n Slack integration",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 5130.0
+      }
+    },
+    {
+      "workflow": "n8n ChatGPT integration",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 4775.4
+      }
+    },
+    {
+      "workflow": "Kno2Gether Livekit N8N Mcp",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/avijeett007/Kno2gether-Livekit-N8N-MCP",
+      "metrics": {
+        "views": 9,
+        "likes": 9,
+        "comments": 1,
+        "engagement_score": 4666.67
+      }
+    },
+    {
+      "workflow": "Kno2Gether Livekit N8N Mcp",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/avijeett007/Kno2gether-Livekit-N8N-MCP",
+      "metrics": {
+        "views": 9,
+        "likes": 9,
+        "comments": 1,
+        "engagement_score": 4666.67
+      }
+    },
+    {
+      "workflow": "n8n Gmail automation",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 3785.6000000000004
+      }
+    },
+    {
+      "workflow": "150 N8N Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/jz-clln/150-n8n-templates",
+      "metrics": {
+        "views": 111,
+        "likes": 111,
+        "comments": 0,
+        "engagement_score": 3405.41
+      }
+    },
+    {
+      "workflow": "150 N8N Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/jz-clln/150-n8n-templates",
+      "metrics": {
+        "views": 111,
+        "likes": 111,
+        "comments": 0,
+        "engagement_score": 3405.41
+      }
+    },
+    {
+      "workflow": "n8n OpenAI workflow",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 3279.18
+      }
+    },
+    {
+      "workflow": "n8n Google Sheets sync",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 3088.7999999999997
+      }
+    },
+    {
+      "workflow": "n8n Slack integration",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 3078.0
+      }
+    },
+    {
+      "workflow": "N8N Ai Automations",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/lucaswalter/n8n-ai-automations",
+      "metrics": {
+        "views": 1129,
+        "likes": 1129,
+        "comments": 0,
+        "engagement_score": 2996.46
+      }
+    },
+    {
+      "workflow": "N8N Ai Automations",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/lucaswalter/n8n-ai-automations",
+      "metrics": {
+        "views": 1129,
+        "likes": 1129,
+        "comments": 0,
+        "engagement_score": 2996.46
+      }
+    },
+    {
+      "workflow": "N8N Ai Automations",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/lucaswalter/n8n-ai-automations",
+      "metrics": {
+        "views": 1129,
+        "likes": 1129,
+        "comments": 0,
+        "engagement_score": 2996.46
+      }
+    },
+    {
+      "workflow": "N8N Ai Automations",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/lucaswalter/n8n-ai-automations",
+      "metrics": {
+        "views": 1129,
+        "likes": 1129,
+        "comments": 0,
+        "engagement_score": 2996.46
+      }
+    },
+    {
+      "workflow": "N8N",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/n8n-io/n8n",
+      "metrics": {
+        "views": 163273,
+        "likes": 163273,
+        "comments": 1324,
+        "engagement_score": 2982.89
+      }
+    },
+    {
+      "workflow": "N8N",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/n8n-io/n8n",
+      "metrics": {
+        "views": 163274,
+        "likes": 163274,
+        "comments": 1324,
+        "engagement_score": 2982.88
+      }
+    },
+    {
+      "workflow": "N8N Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/Marvomatic/n8n-templates",
+      "metrics": {
+        "views": 1364,
+        "likes": 1364,
+        "comments": 0,
+        "engagement_score": 2906.16
+      }
+    },
+    {
+      "workflow": "N8N Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/Marvomatic/n8n-templates",
+      "metrics": {
+        "views": 1364,
+        "likes": 1364,
+        "comments": 0,
+        "engagement_score": 2906.16
+      }
+    },
+    {
+      "workflow": "Awesome N8N Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "metrics": {
+        "views": 16868,
+        "likes": 16868,
+        "comments": 11,
+        "engagement_score": 2876.81
+      }
+    },
+    {
+      "workflow": "Awesome N8N Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "metrics": {
+        "views": 16868,
+        "likes": 16868,
+        "comments": 11,
+        "engagement_score": 2876.81
+      }
+    },
+    {
+      "workflow": "Awesome N8N Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "metrics": {
+        "views": 16868,
+        "likes": 16868,
+        "comments": 11,
+        "engagement_score": 2876.81
+      }
+    },
+    {
+      "workflow": "Awesome N8N Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "metrics": {
+        "views": 16868,
+        "likes": 16868,
+        "comments": 11,
+        "engagement_score": 2876.81
+      }
+    },
+    {
+      "workflow": "Awesome N8N Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "metrics": {
+        "views": 16868,
+        "likes": 16868,
+        "comments": 11,
+        "engagement_score": 2876.81
+      }
+    },
+    {
+      "workflow": "Awesome N8N Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/enescingoz/awesome-n8n-templates",
+      "metrics": {
+        "views": 16868,
+        "likes": 16868,
+        "comments": 11,
+        "engagement_score": 2876.81
+      }
+    },
+    {
+      "workflow": "n8n Discord bot",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 2872.8
+      }
+    },
+    {
+      "workflow": "N8N Workflow Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/Danitilahun/n8n-workflow-templates",
+      "metrics": {
+        "views": 211,
+        "likes": 211,
+        "comments": 1,
+        "engagement_score": 2867.3
+      }
+    },
+    {
+      "workflow": "N8N Workflow Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/Danitilahun/n8n-workflow-templates",
+      "metrics": {
+        "views": 211,
+        "likes": 211,
+        "comments": 1,
+        "engagement_score": 2867.3
+      }
+    },
+    {
+      "workflow": "N8N Free Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/wassupjay/n8n-free-templates",
+      "metrics": {
+        "views": 5127,
+        "likes": 5127,
+        "comments": 7,
+        "engagement_score": 2834.99
+      }
+    },
+    {
+      "workflow": "N8N Free Templates",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/wassupjay/n8n-free-templates",
+      "metrics": {
+        "views": 5127,
+        "likes": 5127,
+        "comments": 7,
+        "engagement_score": 2834.99
+      }
+    },
+    {
+      "workflow": "N8N Free Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/wassupjay/n8n-free-templates",
+      "metrics": {
+        "views": 5127,
+        "likes": 5127,
+        "comments": 7,
+        "engagement_score": 2834.99
+      }
+    },
+    {
+      "workflow": "N8N Free Templates",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/wassupjay/n8n-free-templates",
+      "metrics": {
+        "views": 5127,
+        "likes": 5127,
+        "comments": 7,
+        "engagement_score": 2834.99
+      }
+    },
+    {
+      "workflow": "Self Hosted Ai Starter Kit",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/n8n-io/self-hosted-ai-starter-kit",
+      "metrics": {
+        "views": 13592,
+        "likes": 13592,
+        "comments": 3,
+        "engagement_score": 2753.09
+      }
+    },
+    {
+      "workflow": "Self Hosted Ai Starter Kit",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/n8n-io/self-hosted-ai-starter-kit",
+      "metrics": {
+        "views": 13592,
+        "likes": 13592,
+        "comments": 3,
+        "engagement_score": 2753.09
+      }
+    },
+    {
+      "workflow": "Awesome N8N Workflows",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/felipfr/awesome-n8n-workflows",
+      "metrics": {
+        "views": 352,
+        "likes": 352,
+        "comments": 0,
+        "engagement_score": 2588.07
+      }
+    },
+    {
+      "workflow": "Awesome N8N Workflows",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/felipfr/awesome-n8n-workflows",
+      "metrics": {
+        "views": 352,
+        "likes": 352,
+        "comments": 0,
+        "engagement_score": 2588.07
+      }
+    },
+    {
+      "workflow": "n8n Notion integration",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 2534.0
+      }
+    },
+    {
+      "workflow": "n8n Webhook automation",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 2421.3
+      }
+    },
+    {
+      "workflow": "Nanobrowser",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/nanobrowser/nanobrowser",
+      "metrics": {
+        "views": 11610,
+        "likes": 11610,
+        "comments": 41,
+        "engagement_score": 2313.7
+      }
+    },
+    {
+      "workflow": "Nanobrowser",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/nanobrowser/nanobrowser",
+      "metrics": {
+        "views": 11610,
+        "likes": 11610,
+        "comments": 41,
+        "engagement_score": 2313.7
+      }
+    },
+    {
+      "workflow": "n8n Gmail automation",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 2271.36
+      }
+    },
+    {
+      "workflow": "Aimin",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/HeyNina101/aimin",
+      "metrics": {
+        "views": 13,
+        "likes": 13,
+        "comments": 0,
+        "engagement_score": 2230.77
+      }
+    },
+    {
+      "workflow": "Aimin",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/HeyNina101/aimin",
+      "metrics": {
+        "views": 13,
+        "likes": 13,
+        "comments": 0,
+        "engagement_score": 2230.77
+      }
+    },
+    {
+      "workflow": "Metriqe",
+      "platform": "GitHub",
+      "country": "US",
+      "url": "https://github.com/hereandnowai/metriqe",
+      "metrics": {
+        "views": 7,
+        "likes": 7,
+        "comments": 0,
+        "engagement_score": 2000.0
+      }
+    },
+    {
+      "workflow": "Metriqe",
+      "platform": "GitHub",
+      "country": "IN",
+      "url": "https://github.com/hereandnowai/metriqe",
+      "metrics": {
+        "views": 7,
+        "likes": 7,
+        "comments": 0,
+        "engagement_score": 2000.0
+      }
+    },
+    {
+      "workflow": "n8n Airtable workflow",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1953.6000000000001
+      }
+    },
+    {
+      "workflow": "n8n Google Sheets sync",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1853.28
+      }
+    },
+    {
+      "workflow": "n8n WhatsApp automation",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1839.6000000000001
+      }
+    },
+    {
+      "workflow": "n8n API automation",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1783.5
+      }
+    },
+    {
+      "workflow": "n8n Discord bot",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1723.68
+      }
+    },
+    {
+      "workflow": "n8n Instagram automation",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1695.6
+      }
+    },
+    {
+      "workflow": "n8n Notion integration",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1520.3999999999999
+      }
+    },
+    {
+      "workflow": "n8n Webhook automation",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1452.78
+      }
+    },
+    {
+      "workflow": "n8n Twitter bot",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1353.6000000000001
+      }
+    },
+    {
+      "workflow": "n8n MongoDB integration",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1173.0600000000002
+      }
+    },
+    {
+      "workflow": "n8n Airtable workflow",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1172.16
+      }
+    },
+    {
+      "workflow": "n8n WhatsApp automation",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1103.76
+      }
+    },
+    {
+      "workflow": "n8n API automation",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1070.1000000000001
+      }
+    },
+    {
+      "workflow": "n8n Instagram automation",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1017.36
+      }
+    },
+    {
+      "workflow": "n8n PostgreSQL workflow",
+      "platform": "Google Search",
+      "country": "US",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 1016.3799999999999
+      }
+    },
+    {
+      "workflow": "n8n Twitter bot",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 812.1600000000001
+      }
+    },
+    {
+      "workflow": "n8n MongoDB integration",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 703.836
+      }
+    },
+    {
+      "workflow": "n8n PostgreSQL workflow",
+      "platform": "Google Search",
+      "country": "IN",
+      "url": null,
+      "metrics": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "engagement_score": 609.828
+      }
+    },
+    {
+      "workflow": "Help us test the new AI Evaluation feature 🤖",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/help-us-test-the-new-ai-evaluation-feature/118962",
+      "metrics": {
+        "views": 2123,
+        "likes": 80,
+        "comments": 0,
+        "engagement_score": 268.96
+      }
+    },
+    {
+      "workflow": "100k stars on GitHub! :tada:",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/100k-stars-on-github/122554",
+      "metrics": {
+        "views": 1523,
+        "likes": 141,
+        "comments": 0,
+        "engagement_score": 244.25
+      }
+    },
+    {
+      "workflow": "New fonts. New vibes. Same automation magic",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/new-fonts-new-vibes-same-automation-magic/92983",
+      "metrics": {
+        "views": 1946,
+        "likes": 113,
+        "comments": 0,
+        "engagement_score": 231.76
+      }
+    },
+    {
+      "workflow": "We reached 75k GitHub Stars!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/we-reached-75k-github-stars/98378",
+      "metrics": {
+        "views": 739,
+        "likes": 49,
+        "comments": 0,
+        "engagement_score": 205.68
+      }
+    },
+    {
+      "workflow": "New on the forum homepage: Community Highlights",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/new-on-the-forum-homepage-community-highlights/173795",
+      "metrics": {
+        "views": 1579,
+        "likes": 93,
+        "comments": 0,
+        "engagement_score": 169.09
+      }
+    },
+    {
+      "workflow": "Text Course Updates",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/text-course-updates/160448",
+      "metrics": {
+        "views": 2349,
+        "likes": 52,
+        "comments": 0,
+        "engagement_score": 160.49
+      }
+    },
+    {
+      "workflow": "N8n closes €55M Series B round led by Highland Europe",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/n8n-closes-55m-series-b-round-led-by-highland-europe/92617",
+      "metrics": {
+        "views": 1556,
+        "likes": 86,
+        "comments": 0,
+        "engagement_score": 158.74
+      }
+    },
+    {
+      "workflow": "Build slack AI Agent | Slack and n8n integration 2025",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=6yxzn6DIIYU",
+      "metrics": {
+        "views": 110,
+        "likes": 8,
+        "comments": 0,
+        "engagement_score": 145.45
+      }
+    },
+    {
+      "workflow": "Request for feedback: Workflow evaluation beta",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/request-for-feedback-workflow-evaluation-beta/122448",
+      "metrics": {
+        "views": 1556,
+        "likes": 52,
+        "comments": 0,
+        "engagement_score": 134.32
+      }
+    },
+    {
+      "workflow": "Help us test some canvas improvements",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/help-us-test-some-canvas-improvements/201703",
+      "metrics": {
+        "views": 2519,
+        "likes": 81,
+        "comments": 0,
+        "engagement_score": 115.52
+      }
+    },
+    {
+      "workflow": "Organize your workspace with Folders",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/organize-your-workspace-with-folders/95887",
+      "metrics": {
+        "views": 3638,
+        "likes": 126,
+        "comments": 0,
+        "engagement_score": 112.97
+      }
+    },
+    {
+      "workflow": "N8N Webhooks Masterclass: Beginner to Pro in 13 Minutes",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=NcFOck4R6zw",
+      "metrics": {
+        "views": 351,
+        "likes": 13,
+        "comments": 4,
+        "engagement_score": 108.26
+      }
+    },
+    {
+      "workflow": "N8N Webhooks Masterclass: Beginner to Pro in 13 Minutes",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=NcFOck4R6zw",
+      "metrics": {
+        "views": 351,
+        "likes": 13,
+        "comments": 4,
+        "engagement_score": 108.26
+      }
+    },
+    {
+      "workflow": "n8n will change your life as a developer...",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=bS9R6aCVEzw",
+      "metrics": {
+        "views": 1019549,
+        "likes": 51587,
+        "comments": 1941,
+        "engagement_score": 106.91
+      }
+    },
+    {
+      "workflow": "Use N8N premium features for free #n8n #premium #free #ai #aiagents #openai #claude #deepseek #tech",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=hbr8oH2jyGs",
+      "metrics": {
+        "views": 165714,
+        "likes": 8297,
+        "comments": 199,
+        "engagement_score": 103.74
+      }
+    },
+    {
+      "workflow": "Use N8N premium features for free #n8n #premium #free #ai #aiagents #openai #claude #deepseek #tech",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=hbr8oH2jyGs",
+      "metrics": {
+        "views": 165714,
+        "likes": 8297,
+        "comments": 199,
+        "engagement_score": 103.74
+      }
+    },
+    {
+      "workflow": "2000+ Free n8n Workflows on GitHub  👨‍💻 | Boost Your Productivity Instantly! #shorts",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=g2I5SaGTn4w",
+      "metrics": {
+        "views": 312952,
+        "likes": 7138,
+        "comments": 5751,
+        "engagement_score": 100.75
+      }
+    },
+    {
+      "workflow": ":birthday: We're celebrating - n8n turns five!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/were-celebrating-n8n-turns-five/57000",
+      "metrics": {
+        "views": 1701,
+        "likes": 66,
+        "comments": 0,
+        "engagement_score": 100.53
+      }
+    },
+    {
+      "workflow": "ChatGPT + Make.com Can Start a READY-MADE WORKFLOW (N8N ALTERNATIVE)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=oxKlyPU8xnU",
+      "metrics": {
+        "views": 23179,
+        "likes": 1078,
+        "comments": 45,
+        "engagement_score": 98.84
+      }
+    },
+    {
+      "workflow": "Grüße aus Berlin! (n8n March 2025 Team Offsite)",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/grusse-aus-berlin-n8n-march-2025-team-offsite/86477",
+      "metrics": {
+        "views": 1444,
+        "likes": 54,
+        "comments": 0,
+        "engagement_score": 97.65
+      }
+    },
+    {
+      "workflow": "How To Connect ChatGPT to N8N (Step By Step Tutorial)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=dmnT3t2hFR8",
+      "metrics": {
+        "views": 321,
+        "likes": 10,
+        "comments": 3,
+        "engagement_score": 90.34
+      }
+    },
+    {
+      "workflow": "How To Connect ChatGPT to N8N (Step By Step Tutorial)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=dmnT3t2hFR8",
+      "metrics": {
+        "views": 321,
+        "likes": 10,
+        "comments": 3,
+        "engagement_score": 90.34
+      }
+    },
+    {
+      "workflow": "n8n Slack Integration: Unlock the EASY Way [2025]",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=kbjdC9oL6Ak",
+      "metrics": {
+        "views": 2960,
+        "likes": 77,
+        "comments": 33,
+        "engagement_score": 85.47
+      }
+    },
+    {
+      "workflow": "n8n Slack Integration: Unlock the EASY Way [2025]",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=kbjdC9oL6Ak",
+      "metrics": {
+        "views": 2960,
+        "likes": 77,
+        "comments": 33,
+        "engagement_score": 85.47
+      }
+    },
+    {
+      "workflow": "This n8n automation setup costs me $0/month 😎Self-hosted. Scalable. Free.",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=rdzI1_qyzD0",
+      "metrics": {
+        "views": 93781,
+        "likes": 1707,
+        "comments": 1484,
+        "engagement_score": 83.88
+      }
+    },
+    {
+      "workflow": "You NEED to Use n8n RIGHT NOW!! (Free, Local, Private)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ONgECvZNI3o",
+      "metrics": {
+        "views": 2195716,
+        "likes": 88183,
+        "comments": 2422,
+        "engagement_score": 83.63
+      }
+    },
+    {
+      "workflow": "You NEED to Use n8n RIGHT NOW!! (Free, Local, Private)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ONgECvZNI3o",
+      "metrics": {
+        "views": 2195716,
+        "likes": 88183,
+        "comments": 2422,
+        "engagement_score": 83.63
+      }
+    },
+    {
+      "workflow": "The Only 12 n8n AI Automations You'll Ever Need (Steal These)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=niHtZBNaJ58",
+      "metrics": {
+        "views": 158399,
+        "likes": 6486,
+        "comments": 56,
+        "engagement_score": 82.96
+      }
+    },
+    {
+      "workflow": "The Only 12 n8n AI Automations You'll Ever Need (Steal These)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=niHtZBNaJ58",
+      "metrics": {
+        "views": 158399,
+        "likes": 6486,
+        "comments": 56,
+        "engagement_score": 82.96
+      }
+    },
+    {
+      "workflow": "The Only 12 n8n AI Automations You'll Ever Need (Steal These)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=niHtZBNaJ58",
+      "metrics": {
+        "views": 158399,
+        "likes": 6486,
+        "comments": 56,
+        "engagement_score": 82.96
+      }
+    },
+    {
+      "workflow": "The Only 12 n8n AI Automations You'll Ever Need (Steal These)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=niHtZBNaJ58",
+      "metrics": {
+        "views": 158399,
+        "likes": 6486,
+        "comments": 56,
+        "engagement_score": 82.96
+      }
+    },
+    {
+      "workflow": "Want to MAXIMIZE Your Workflow? Try These Slack Automation Tricks",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=uj450106e6s",
+      "metrics": {
+        "views": 100,
+        "likes": 1,
+        "comments": 2,
+        "engagement_score": 80.0
+      }
+    },
+    {
+      "workflow": "Want to MAXIMIZE Your Workflow? Try These Slack Automation Tricks",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=uj450106e6s",
+      "metrics": {
+        "views": 100,
+        "likes": 1,
+        "comments": 2,
+        "engagement_score": 80.0
+      }
+    },
+    {
+      "workflow": "I Built the Ultimate Team of Agents in n8n  #artificialintelligence #n8n #agentgpt  #techtok #coding",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=2aC2ly7vKtM",
+      "metrics": {
+        "views": 957369,
+        "likes": 37548,
+        "comments": 316,
+        "engagement_score": 79.43
+      }
+    },
+    {
+      "workflow": "I Built the Ultimate Team of Agents in n8n  #artificialintelligence #n8n #agentgpt  #techtok #coding",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=2aC2ly7vKtM",
+      "metrics": {
+        "views": 957369,
+        "likes": 37548,
+        "comments": 316,
+        "engagement_score": 79.43
+      }
+    },
+    {
+      "workflow": "I Built the Ultimate Team of Agents in n8n  #artificialintelligence #n8n #agentgpt  #techtok #coding",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=2aC2ly7vKtM",
+      "metrics": {
+        "views": 957369,
+        "likes": 37548,
+        "comments": 316,
+        "engagement_score": 79.43
+      }
+    },
+    {
+      "workflow": "n8n Webhook Security: Learn This Before It’s Too Late",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=3FfCRbq3XMs",
+      "metrics": {
+        "views": 55679,
+        "likes": 2024,
+        "comments": 62,
+        "engagement_score": 76.04
+      }
+    },
+    {
+      "workflow": "AI-powered workflow-building coming soon",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/ai-powered-workflow-building-coming-soon/196499",
+      "metrics": {
+        "views": 11007,
+        "likes": 308,
+        "comments": 0,
+        "engagement_score": 75.86
+      }
+    },
+    {
+      "workflow": "n8n Course for Beginners – Build Complex Workflows & Master AI Integration",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=GIZzRGYpCbM",
+      "metrics": {
+        "views": 96931,
+        "likes": 3116,
+        "comments": 89,
+        "engagement_score": 67.05
+      }
+    },
+    {
+      "workflow": "n8n Course for Beginners – Build Complex Workflows & Master AI Integration",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=GIZzRGYpCbM",
+      "metrics": {
+        "views": 96931,
+        "likes": 3116,
+        "comments": 89,
+        "engagement_score": 67.05
+      }
+    },
+    {
+      "workflow": "n8n Course for Beginners – Build Complex Workflows & Master AI Integration",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=GIZzRGYpCbM",
+      "metrics": {
+        "views": 96931,
+        "likes": 3116,
+        "comments": 89,
+        "engagement_score": 67.05
+      }
+    },
+    {
+      "workflow": "n8n Course for Beginners – Build Complex Workflows & Master AI Integration",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=GIZzRGYpCbM",
+      "metrics": {
+        "views": 96931,
+        "likes": 3116,
+        "comments": 89,
+        "engagement_score": 67.05
+      }
+    },
+    {
+      "workflow": "How to sync Google Drive Files with Airtable in n8n",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=-T7Ev1IUe3s",
+      "metrics": {
+        "views": 120,
+        "likes": 4,
+        "comments": 0,
+        "engagement_score": 66.67
+      }
+    },
+    {
+      "workflow": "How to sync Google Drive Files with Airtable in n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=-T7Ev1IUe3s",
+      "metrics": {
+        "views": 120,
+        "likes": 4,
+        "comments": 0,
+        "engagement_score": 66.67
+      }
+    },
+    {
+      "workflow": "OpenAI Just Leveled Up n8n AI Agents (here's how it works)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=lokbsA5VXOk",
+      "metrics": {
+        "views": 27512,
+        "likes": 826,
+        "comments": 48,
+        "engagement_score": 65.28
+      }
+    },
+    {
+      "workflow": "OpenAI Just Leveled Up n8n AI Agents (here's how it works)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=lokbsA5VXOk",
+      "metrics": {
+        "views": 27512,
+        "likes": 826,
+        "comments": 48,
+        "engagement_score": 65.28
+      }
+    },
+    {
+      "workflow": ":mega: New category: 'Help me Build my Workflow'",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/new-category-help-me-build-my-workflow/76826",
+      "metrics": {
+        "views": 7797,
+        "likes": 188,
+        "comments": 0,
+        "engagement_score": 65.15
+      }
+    },
+    {
+      "workflow": "This AI CRM System Automates Your Entire Sales Process (No-Code)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=9zO-NdPknWQ",
+      "metrics": {
+        "views": 19404,
+        "likes": 564,
+        "comments": 28,
+        "engagement_score": 62.46
+      }
+    },
+    {
+      "workflow": "This AI CRM System Automates Your Entire Sales Process (No-Code)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=9zO-NdPknWQ",
+      "metrics": {
+        "views": 19404,
+        "likes": 564,
+        "comments": 28,
+        "engagement_score": 62.46
+      }
+    },
+    {
+      "workflow": "Seriously, please watch this before you start learning n8n",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ofC4OeNjDx8",
+      "metrics": {
+        "views": 121787,
+        "likes": 3161,
+        "comments": 391,
+        "engagement_score": 61.54
+      }
+    },
+    {
+      "workflow": "Seriously, please watch this before you start learning n8n",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ofC4OeNjDx8",
+      "metrics": {
+        "views": 121787,
+        "likes": 3161,
+        "comments": 391,
+        "engagement_score": 61.54
+      }
+    },
+    {
+      "workflow": "Seriously, please watch this before you start learning n8n",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ofC4OeNjDx8",
+      "metrics": {
+        "views": 121787,
+        "likes": 3161,
+        "comments": 391,
+        "engagement_score": 61.54
+      }
+    },
+    {
+      "workflow": "Seriously, please watch this before you start learning n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=ofC4OeNjDx8",
+      "metrics": {
+        "views": 121787,
+        "likes": 3161,
+        "comments": 391,
+        "engagement_score": 61.54
+      }
+    },
+    {
+      "workflow": "Seriously, please watch this before you start learning n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=ofC4OeNjDx8",
+      "metrics": {
+        "views": 121787,
+        "likes": 3161,
+        "comments": 391,
+        "engagement_score": 61.54
+      }
+    },
+    {
+      "workflow": "Seriously, please watch this before you start learning n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=ofC4OeNjDx8",
+      "metrics": {
+        "views": 121787,
+        "likes": 3161,
+        "comments": 391,
+        "engagement_score": 61.54
+      }
+    },
+    {
+      "workflow": "Connect Discord to N8N Guide | N8N Discord Integration | How to Use Discord in N8N | Kuku Courses",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=-AeIN0S9yG8",
+      "metrics": {
+        "views": 424,
+        "likes": 10,
+        "comments": 2,
+        "engagement_score": 61.32
+      }
+    },
+    {
+      "workflow": "Connect Discord to N8N Guide | N8N Discord Integration | How to Use Discord in N8N | Kuku Courses",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=-AeIN0S9yG8",
+      "metrics": {
+        "views": 424,
+        "likes": 10,
+        "comments": 2,
+        "engagement_score": 61.32
+      }
+    },
+    {
+      "workflow": "New Node Creation Tool",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/new-node-creation-tool/180884",
+      "metrics": {
+        "views": 2193,
+        "likes": 53,
+        "comments": 0,
+        "engagement_score": 60.65
+      }
+    },
+    {
+      "workflow": "Automate WhatsApp Orders with n8n + Google Sheets (No Code Needed)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=Umwj8gI7-pk",
+      "metrics": {
+        "views": 176873,
+        "likes": 4794,
+        "comments": 305,
+        "engagement_score": 59.38
+      }
+    },
+    {
+      "workflow": "Build your first Google sheets Agent only with WhatsApp and ChatGPT in #n8n #aiautomation (NO CODE)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=4F3JeO4hxwg",
+      "metrics": {
+        "views": 71977,
+        "likes": 1892,
+        "comments": 105,
+        "engagement_score": 56.95
+      }
+    },
+    {
+      "workflow": "Master 80% of n8n in 36 Minutes",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=e3OV3LnrS7o",
+      "metrics": {
+        "views": 304584,
+        "likes": 7904,
+        "comments": 302,
+        "engagement_score": 54.87
+      }
+    },
+    {
+      "workflow": "Master 80% of n8n in 36 Minutes",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=e3OV3LnrS7o",
+      "metrics": {
+        "views": 304584,
+        "likes": 7904,
+        "comments": 302,
+        "engagement_score": 54.87
+      }
+    },
+    {
+      "workflow": "n8n Google Sheets Tutorial: Connect Forms, APIs, and Databases in Minutes!",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=JAEZ2GbFUaw",
+      "metrics": {
+        "views": 731,
+        "likes": 17,
+        "comments": 2,
+        "engagement_score": 54.72
+      }
+    },
+    {
+      "workflow": "n8n + Notion: How to Connect to Multiple Databases (2025 Tutorial) #n8n  #notion  #n8ntutorial",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=PjbDFyX9BJM",
+      "metrics": {
+        "views": 5835,
+        "likes": 158,
+        "comments": 1,
+        "engagement_score": 54.67
+      }
+    },
+    {
+      "workflow": "n8n + Notion: How to Connect to Multiple Databases (2025 Tutorial) #n8n  #notion  #n8ntutorial",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=PjbDFyX9BJM",
+      "metrics": {
+        "views": 5835,
+        "likes": 158,
+        "comments": 1,
+        "engagement_score": 54.67
+      }
+    },
+    {
+      "workflow": "n8n Google Sheets Tutorial: Connect Forms, APIs, and Databases in Minutes!",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=JAEZ2GbFUaw",
+      "metrics": {
+        "views": 733,
+        "likes": 17,
+        "comments": 2,
+        "engagement_score": 54.57
+      }
+    },
+    {
+      "workflow": "🌟 Announcing the n8n Ambassador Program! 🌟",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/announcing-the-n8n-ambassador-program/47996",
+      "metrics": {
+        "views": 4557,
+        "likes": 68,
+        "comments": 0,
+        "engagement_score": 54.2
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "Build a Whatsapp AI Agent for appointment handling (n8n Tutorial) #n8n #aiautomation",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=vcvRVlc_VFg",
+      "metrics": {
+        "views": 768564,
+        "likes": 19932,
+        "comments": 402,
+        "engagement_score": 53.44
+      }
+    },
+    {
+      "workflow": "N8n vs. Zapier: Which No Code/Low Code Tool Is Right for You? | Plivo #Shorts  #Zapier #n8n #nocode",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=MO7iPnX-0U8",
+      "metrics": {
+        "views": 68012,
+        "likes": 1669,
+        "comments": 97,
+        "engagement_score": 53.36
+      }
+    },
+    {
+      "workflow": "Beginner’s Guide to n8n Webhooks (No Coding Required)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=uFc7YQG0a1M",
+      "metrics": {
+        "views": 1542,
+        "likes": 25,
+        "comments": 10,
+        "engagement_score": 51.88
+      }
+    },
+    {
+      "workflow": "Beginner’s Guide to n8n Webhooks (No Coding Required)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=uFc7YQG0a1M",
+      "metrics": {
+        "views": 1542,
+        "likes": 25,
+        "comments": 10,
+        "engagement_score": 51.88
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2025: Build AI Agents Step-by-Step",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=PfdnYe2690E",
+      "metrics": {
+        "views": 73390,
+        "likes": 1790,
+        "comments": 61,
+        "engagement_score": 51.27
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2025: Build AI Agents Step-by-Step",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=PfdnYe2690E",
+      "metrics": {
+        "views": 73390,
+        "likes": 1790,
+        "comments": 61,
+        "engagement_score": 51.27
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2025: Build AI Agents Step-by-Step",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=PfdnYe2690E",
+      "metrics": {
+        "views": 73390,
+        "likes": 1790,
+        "comments": 61,
+        "engagement_score": 51.27
+      }
+    },
+    {
+      "workflow": "I Upgraded My Gmail AI Agent (n8n beginner guide, free template)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=z5Om-Jd_r1M",
+      "metrics": {
+        "views": 2385,
+        "likes": 48,
+        "comments": 8,
+        "engagement_score": 50.31
+      }
+    },
+    {
+      "workflow": "I Upgraded My Gmail AI Agent (n8n beginner guide, free template)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=z5Om-Jd_r1M",
+      "metrics": {
+        "views": 2385,
+        "likes": 48,
+        "comments": 8,
+        "engagement_score": 50.31
+      }
+    },
+    {
+      "workflow": "Understanding APIs in n8n (as a beginner)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ju9xk_QX990",
+      "metrics": {
+        "views": 31417,
+        "likes": 753,
+        "comments": 19,
+        "engagement_score": 49.75
+      }
+    },
+    {
+      "workflow": "Zapier vs Make.com vs n8n: The Ultimate 2025 Beginners Guide",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=8kmiUKyyRNw",
+      "metrics": {
+        "views": 24387,
+        "likes": 524,
+        "comments": 54,
+        "engagement_score": 49.62
+      }
+    },
+    {
+      "workflow": "Zapier vs Make.com vs n8n: The Ultimate 2025 Beginners Guide",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=8kmiUKyyRNw",
+      "metrics": {
+        "views": 24387,
+        "likes": 524,
+        "comments": 54,
+        "engagement_score": 49.62
+      }
+    },
+    {
+      "workflow": "AI voice agent calls anyone with any message via Slack #n8n #ai #aiautomation #automation #retellai",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=DX115ZyQmkQ",
+      "metrics": {
+        "views": 21484,
+        "likes": 433,
+        "comments": 64,
+        "engagement_score": 49.25
+      }
+    },
+    {
+      "workflow": "How To Connect Notion To n8n (10x Productivity)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=EgKa0Jdf_rc",
+      "metrics": {
+        "views": 3741,
+        "likes": 75,
+        "comments": 9,
+        "engagement_score": 47.31
+      }
+    },
+    {
+      "workflow": "Step-by-Step: N8N Webhooks (From Beginner to Pro)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=lK3veuZAg0c",
+      "metrics": {
+        "views": 100461,
+        "likes": 2191,
+        "comments": 92,
+        "engagement_score": 46.37
+      }
+    },
+    {
+      "workflow": "Step-by-Step: N8N Webhooks (From Beginner to Pro)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=lK3veuZAg0c",
+      "metrics": {
+        "views": 100461,
+        "likes": 2191,
+        "comments": 92,
+        "engagement_score": 46.37
+      }
+    },
+    {
+      "workflow": "n8n Tutorial: Connect WhatsApp AI Agent in n8n with Google Sheets",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=9m5yZidOsSE",
+      "metrics": {
+        "views": 273697,
+        "likes": 6127,
+        "comments": 86,
+        "engagement_score": 45.71
+      }
+    },
+    {
+      "workflow": "Build an AI Email Assistant in n8n | Gmail Automation Walkthrough",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=fNBHxZtNPiY",
+      "metrics": {
+        "views": 6078,
+        "likes": 95,
+        "comments": 28,
+        "engagement_score": 45.08
+      }
+    },
+    {
+      "workflow": "This is how you integrate the new ChatGPT-5 in an WhatsApp AI Agent in #n8n Tutorial",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=1PTd6xu9mUA",
+      "metrics": {
+        "views": 23689,
+        "likes": 491,
+        "comments": 19,
+        "engagement_score": 43.86
+      }
+    },
+    {
+      "workflow": "This is how you integrate the new ChatGPT-5 in an WhatsApp AI Agent in #n8n Tutorial",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=1PTd6xu9mUA",
+      "metrics": {
+        "views": 23689,
+        "likes": 491,
+        "comments": 19,
+        "engagement_score": 43.86
+      }
+    },
+    {
+      "workflow": ":mega: We Need Your Help! (Answer & Earn)",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/we-need-your-help-answer-earn/80361",
+      "metrics": {
+        "views": 48820,
+        "likes": 736,
+        "comments": 0,
+        "engagement_score": 42.87
+      }
+    },
+    {
+      "workflow": "Gmail on Autopilot: 15 Insane n8n Automation Hacks",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=_2bfCG9922E",
+      "metrics": {
+        "views": 18437,
+        "likes": 350,
+        "comments": 28,
+        "engagement_score": 42.52
+      }
+    },
+    {
+      "workflow": "n8n Tutorial: How to Connect n8n with Google Sheets #aiautomation #automation #n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=E2R-jjoe5CU",
+      "metrics": {
+        "views": 13035,
+        "likes": 273,
+        "comments": 0,
+        "engagement_score": 41.89
+      }
+    },
+    {
+      "workflow": "Add This n8n AI Agent To Your CRM To Automate Follow Ups (template included)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=KqlTLj2vZzs",
+      "metrics": {
+        "views": 6262,
+        "likes": 123,
+        "comments": 4,
+        "engagement_score": 41.2
+      }
+    },
+    {
+      "workflow": "Add This n8n AI Agent To Your CRM To Automate Follow Ups (template included)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=KqlTLj2vZzs",
+      "metrics": {
+        "views": 6262,
+        "likes": 123,
+        "comments": 4,
+        "engagement_score": 41.2
+      }
+    },
+    {
+      "workflow": "N8N & Airtable Masterclass: Ultimate Beginner-to-Expert Guide",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=xvxD_Q5iQJc",
+      "metrics": {
+        "views": 26590,
+        "likes": 457,
+        "comments": 60,
+        "engagement_score": 41.14
+      }
+    },
+    {
+      "workflow": "N8N & Airtable Masterclass: Ultimate Beginner-to-Expert Guide",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=xvxD_Q5iQJc",
+      "metrics": {
+        "views": 26590,
+        "likes": 457,
+        "comments": 60,
+        "engagement_score": 41.14
+      }
+    },
+    {
+      "workflow": "n8n + Discord: Step-by-Step Setup to Adding Discord Bots - Quick & Simple!",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=l4C2buIdfp4",
+      "metrics": {
+        "views": 8842,
+        "likes": 159,
+        "comments": 15,
+        "engagement_score": 41.05
+      }
+    },
+    {
+      "workflow": "n8n + Discord: Step-by-Step Setup to Adding Discord Bots - Quick & Simple!",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=l4C2buIdfp4",
+      "metrics": {
+        "views": 8842,
+        "likes": 159,
+        "comments": 15,
+        "engagement_score": 41.05
+      }
+    },
+    {
+      "workflow": "How to Connect Slack to n8n (2025) (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=qk5JH6ImK0I",
+      "metrics": {
+        "views": 69367,
+        "likes": 1235,
+        "comments": 114,
+        "engagement_score": 40.54
+      }
+    },
+    {
+      "workflow": "How to Connect Slack to n8n (2025) (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=qk5JH6ImK0I",
+      "metrics": {
+        "views": 69367,
+        "likes": 1235,
+        "comments": 114,
+        "engagement_score": 40.54
+      }
+    },
+    {
+      "workflow": "How To Connect Google Sheets To Your n8n AI Automation Workflow",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=R9xaJ8vFXBY",
+      "metrics": {
+        "views": 14525,
+        "likes": 229,
+        "comments": 40,
+        "engagement_score": 39.79
+      }
+    },
+    {
+      "workflow": "Build AI Agents with n8n | Complete Beginner’s Automation Course 2025",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=UtXzdmpysmU",
+      "metrics": {
+        "views": 180894,
+        "likes": 3172,
+        "comments": 234,
+        "engagement_score": 38.95
+      }
+    },
+    {
+      "workflow": "How to automate Notion databases using n8n",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=up2Wi3Y9a-4",
+      "metrics": {
+        "views": 28885,
+        "likes": 520,
+        "comments": 27,
+        "engagement_score": 38.81
+      }
+    },
+    {
+      "workflow": "How to automate Notion databases using n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=up2Wi3Y9a-4",
+      "metrics": {
+        "views": 28885,
+        "likes": 520,
+        "comments": 27,
+        "engagement_score": 38.81
+      }
+    },
+    {
+      "workflow": "N8n, Make, or Zapier? 🤔 Which tool is best for automation?",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=cAeYCFBW3_E",
+      "metrics": {
+        "views": 73189,
+        "likes": 1344,
+        "comments": 49,
+        "engagement_score": 38.74
+      }
+    },
+    {
+      "workflow": "N8n, Make, or Zapier? 🤔 Which tool is best for automation?",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=cAeYCFBW3_E",
+      "metrics": {
+        "views": 73189,
+        "likes": 1344,
+        "comments": 49,
+        "engagement_score": 38.74
+      }
+    },
+    {
+      "workflow": "N8n, Make, or Zapier? 🤔 Which tool is best for automation?",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=cAeYCFBW3_E",
+      "metrics": {
+        "views": 73189,
+        "likes": 1344,
+        "comments": 49,
+        "engagement_score": 38.74
+      }
+    },
+    {
+      "workflow": "N8n, Make, or Zapier? 🤔 Which tool is best for automation?",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=cAeYCFBW3_E",
+      "metrics": {
+        "views": 73189,
+        "likes": 1344,
+        "comments": 49,
+        "engagement_score": 38.74
+      }
+    },
+    {
+      "workflow": "Step-by-Step: Build an AI Agent for Gmail Automation with n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=_YU2pZ4eUGQ",
+      "metrics": {
+        "views": 24185,
+        "likes": 406,
+        "comments": 40,
+        "engagement_score": 38.54
+      }
+    },
+    {
+      "workflow": "How To Connect Airtable To Your n8n AI Automation Workflow",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=64HO3Dlr5T8",
+      "metrics": {
+        "views": 9249,
+        "likes": 166,
+        "comments": 8,
+        "engagement_score": 38.49
+      }
+    },
+    {
+      "workflow": "How to Set Up a Notion Knowledge Base AI Assistant",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ynLZwS2Nhnc",
+      "metrics": {
+        "views": 42594,
+        "likes": 706,
+        "comments": 64,
+        "engagement_score": 37.66
+      }
+    },
+    {
+      "workflow": "Zapier vs n8n: The Truth No One Tells You",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=6jbqfaFHs40",
+      "metrics": {
+        "views": 45348,
+        "likes": 821,
+        "comments": 21,
+        "engagement_score": 37.6
+      }
+    },
+    {
+      "workflow": "Zapier vs n8n: The Truth No One Tells You",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=6jbqfaFHs40",
+      "metrics": {
+        "views": 45348,
+        "likes": 821,
+        "comments": 21,
+        "engagement_score": 37.6
+      }
+    },
+    {
+      "workflow": "How I Built an AI Agent to Automate my Emails in n8n (Step by Step, No Code)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=KIJHRq_Tg6o",
+      "metrics": {
+        "views": 87978,
+        "likes": 1536,
+        "comments": 76,
+        "engagement_score": 37.51
+      }
+    },
+    {
+      "workflow": "How I Built an AI Agent to Automate my Emails in n8n (Step by Step, No Code)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=KIJHRq_Tg6o",
+      "metrics": {
+        "views": 87978,
+        "likes": 1536,
+        "comments": 76,
+        "engagement_score": 37.51
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners: How to Build AI Automations for FREE (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=Fy1UCBcgF2o",
+      "metrics": {
+        "views": 471228,
+        "likes": 8462,
+        "comments": 199,
+        "engagement_score": 37.18
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners: How to Build AI Automations for FREE (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=Fy1UCBcgF2o",
+      "metrics": {
+        "views": 471228,
+        "likes": 8462,
+        "comments": 199,
+        "engagement_score": 37.18
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners: How to Build AI Automations for FREE (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=Fy1UCBcgF2o",
+      "metrics": {
+        "views": 471228,
+        "likes": 8462,
+        "comments": 199,
+        "engagement_score": 37.18
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners: How to Build AI Automations for FREE (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=Fy1UCBcgF2o",
+      "metrics": {
+        "views": 471228,
+        "likes": 8462,
+        "comments": 199,
+        "engagement_score": 37.18
+      }
+    },
+    {
+      "workflow": "Google Sheets on Autopilot: 11 Insane n8n Automation Hacks",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=c8D1PP2erbo",
+      "metrics": {
+        "views": 71762,
+        "likes": 1211,
+        "comments": 81,
+        "engagement_score": 37.14
+      }
+    },
+    {
+      "workflow": "Create an AI Chatbot in Minutes Using n8n! 🤖 (No Coding Required)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=aXf51HXzqLw",
+      "metrics": {
+        "views": 743447,
+        "likes": 13337,
+        "comments": 93,
+        "engagement_score": 36.25
+      }
+    },
+    {
+      "workflow": "Create an AI Chatbot in Minutes Using n8n! 🤖 (No Coding Required)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=aXf51HXzqLw",
+      "metrics": {
+        "views": 743447,
+        "likes": 13337,
+        "comments": 93,
+        "engagement_score": 36.25
+      }
+    },
+    {
+      "workflow": "Create an AI Chatbot in Minutes Using n8n! 🤖 (No Coding Required)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=aXf51HXzqLw",
+      "metrics": {
+        "views": 743447,
+        "likes": 13337,
+        "comments": 93,
+        "engagement_score": 36.25
+      }
+    },
+    {
+      "workflow": "This n8n AI Agent Will Manage Your Email Inbox (100% Automatic)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=l0SiFihbetA",
+      "metrics": {
+        "views": 63148,
+        "likes": 997,
+        "comments": 85,
+        "engagement_score": 35.61
+      }
+    },
+    {
+      "workflow": "This n8n AI Agent Will Manage Your Email Inbox (100% Automatic)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=l0SiFihbetA",
+      "metrics": {
+        "views": 63148,
+        "likes": 997,
+        "comments": 85,
+        "engagement_score": 35.61
+      }
+    },
+    {
+      "workflow": "N8N + Airtable: Automate Your Workflow with No Code!",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=mjMU8PV7Evc",
+      "metrics": {
+        "views": 4424,
+        "likes": 76,
+        "comments": 1,
+        "engagement_score": 35.04
+      }
+    },
+    {
+      "workflow": "Activepieces – Automation Workflow Alternative to Make and n8n #aiautomation #aiagent",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=Hr_9mTea-5Y",
+      "metrics": {
+        "views": 2259,
+        "likes": 39,
+        "comments": 0,
+        "engagement_score": 34.53
+      }
+    },
+    {
+      "workflow": "[N8N + Hubspot] How To Setup And Connect Hubspot CRM to N8N (Step-by-step)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=KzP52kRsRrk",
+      "metrics": {
+        "views": 4732,
+        "likes": 63,
+        "comments": 12,
+        "engagement_score": 34.23
+      }
+    },
+    {
+      "workflow": "How to Connect Slack to n8n (Step-by-Step)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=bp8-qECqh4M",
+      "metrics": {
+        "views": 942,
+        "likes": 14,
+        "comments": 1,
+        "engagement_score": 32.91
+      }
+    },
+    {
+      "workflow": "How To Connect Your Notion Database With n8n (Step-By-Step Guide)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=sGIKj1Y-ugU",
+      "metrics": {
+        "views": 8330,
+        "likes": 102,
+        "comments": 23,
+        "engagement_score": 32.77
+      }
+    },
+    {
+      "workflow": "How To Connect Your Notion Database With n8n (Step-By-Step Guide)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=sGIKj1Y-ugU",
+      "metrics": {
+        "views": 8331,
+        "likes": 102,
+        "comments": 23,
+        "engagement_score": 32.77
+      }
+    },
+    {
+      "workflow": "How to Connect n8n with Airtable (Step-by-Step Tutorial)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=t_JNQqCfeWc",
+      "metrics": {
+        "views": 2243,
+        "likes": 29,
+        "comments": 2,
+        "engagement_score": 28.53
+      }
+    },
+    {
+      "workflow": "How To Connect Google Sheets to N8N in 5 Minutes: Easy Tutorial",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=pWGXlZBGu4k",
+      "metrics": {
+        "views": 134320,
+        "likes": 1492,
+        "comments": 230,
+        "engagement_score": 27.35
+      }
+    },
+    {
+      "workflow": "How To Connect Google Sheets to N8N in 5 Minutes: Easy Tutorial",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=pWGXlZBGu4k",
+      "metrics": {
+        "views": 134320,
+        "likes": 1492,
+        "comments": 230,
+        "engagement_score": 27.35
+      }
+    },
+    {
+      "workflow": "🎁 Unlock these three features for free on your self-hosted community edition!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/unlock-these-three-features-for-free-on-your-self-hosted-community-edition/60992",
+      "metrics": {
+        "views": 16761,
+        "likes": 114,
+        "comments": 0,
+        "engagement_score": 27.03
+      }
+    },
+    {
+      "workflow": "How To Connect ChatGPT To N8N In Minutes!",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=3hDQGhcmBg4",
+      "metrics": {
+        "views": 15584,
+        "likes": 184,
+        "comments": 16,
+        "engagement_score": 26.69
+      }
+    },
+    {
+      "workflow": "How To Connect ChatGPT To N8N In Minutes!",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=3hDQGhcmBg4",
+      "metrics": {
+        "views": 15591,
+        "likes": 184,
+        "comments": 16,
+        "engagement_score": 26.68
+      }
+    },
+    {
+      "workflow": "How to connect GoHighLevel to n8n Using Private Integration",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=T1ANuWRFOHg",
+      "metrics": {
+        "views": 2271,
+        "likes": 24,
+        "comments": 4,
+        "engagement_score": 26.42
+      }
+    },
+    {
+      "workflow": "How To Connect Slack To N8N In 5 Minutes!",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=H4HJBIZzZdU",
+      "metrics": {
+        "views": 4320,
+        "likes": 45,
+        "comments": 7,
+        "engagement_score": 25.69
+      }
+    },
+    {
+      "workflow": "Build Your Own DeepResearch with N8N + Apify + Notion!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/build-your-own-deepresearch-with-n8n-apify-notion/77766",
+      "metrics": {
+        "views": 14193,
+        "likes": 83,
+        "comments": 0,
+        "engagement_score": 23.96
+      }
+    },
+    {
+      "workflow": "n8n Quick Start Tutorial: Build Your First Workflow [2025]",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=4cQWJViybAQ",
+      "metrics": {
+        "views": 699150,
+        "likes": 8046,
+        "comments": 205,
+        "engagement_score": 23.9
+      }
+    },
+    {
+      "workflow": "Automating Discord With n8n Is Easier Than You Think",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=ladTs5wQkR4",
+      "metrics": {
+        "views": 15076,
+        "likes": 149,
+        "comments": 19,
+        "engagement_score": 23.55
+      }
+    },
+    {
+      "workflow": "Automating Discord With n8n Is Easier Than You Think",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=ladTs5wQkR4",
+      "metrics": {
+        "views": 15076,
+        "likes": 149,
+        "comments": 19,
+        "engagement_score": 23.55
+      }
+    },
+    {
+      "workflow": "How To Connect ChatGPT To Your n8n AI Automation Workflow (OpenAI)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=OE-zKj3LQQw",
+      "metrics": {
+        "views": 6091,
+        "likes": 61,
+        "comments": 7,
+        "engagement_score": 23.48
+      }
+    },
+    {
+      "workflow": "Beginner Course (3/9) - What are nodes?",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/beginner-course-3-9-what-are-nodes/48591",
+      "metrics": {
+        "views": 6974,
+        "likes": 57,
+        "comments": 0,
+        "engagement_score": 21.08
+      }
+    },
+    {
+      "workflow": "Using webhooks in n8n (parameters, responses and triggers)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=IvUYJQkf6sA",
+      "metrics": {
+        "views": 113679,
+        "likes": 1094,
+        "comments": 29,
+        "engagement_score": 20.01
+      }
+    },
+    {
+      "workflow": "Using webhooks in n8n (parameters, responses and triggers)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=IvUYJQkf6sA",
+      "metrics": {
+        "views": 113679,
+        "likes": 1094,
+        "comments": 29,
+        "engagement_score": 20.01
+      }
+    },
+    {
+      "workflow": "N8N vs Make vs Zapier (2025) - Honest Review",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=IYV8OVFzq_c",
+      "metrics": {
+        "views": 32194,
+        "likes": 276,
+        "comments": 30,
+        "engagement_score": 19.94
+      }
+    },
+    {
+      "workflow": "N8N vs Make vs Zapier (2025) - Honest Review",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=IYV8OVFzq_c",
+      "metrics": {
+        "views": 32194,
+        "likes": 276,
+        "comments": 30,
+        "engagement_score": 19.94
+      }
+    },
+    {
+      "workflow": "Data Tables Are Here! 📊",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/data-tables-are-here/192256",
+      "metrics": {
+        "views": 19296,
+        "likes": 101,
+        "comments": 0,
+        "engagement_score": 19.02
+      }
+    },
+    {
+      "workflow": "We’re adding MCP Client tool & MCP Trigger nodes - try them now!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/we-re-adding-mcp-client-tool-mcp-trigger-nodes-try-them-now/99338",
+      "metrics": {
+        "views": 29592,
+        "likes": 131,
+        "comments": 0,
+        "engagement_score": 18.59
+      }
+    },
+    {
+      "workflow": "Beginner Course (2/9) - Introduction to APIs and Webhooks",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/beginner-course-2-9-introduction-to-apis-and-webhooks/48590",
+      "metrics": {
+        "views": 11558,
+        "likes": 87,
+        "comments": 0,
+        "engagement_score": 18.17
+      }
+    },
+    {
+      "workflow": "Easily Connect OpenAI to n8n: Here's How",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=9uJS6kvfNDE",
+      "metrics": {
+        "views": 31539,
+        "likes": 204,
+        "comments": 25,
+        "engagement_score": 15.31
+      }
+    },
+    {
+      "workflow": "n8n Tutorial: How to Use Webhooks in n8n #aiautomation #automation #n8n",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=ps7SAe73R-o",
+      "metrics": {
+        "views": 9711,
+        "likes": 73,
+        "comments": 0,
+        "engagement_score": 15.03
+      }
+    },
+    {
+      "workflow": "Beginner Course (1/9) - Introduction to Automation",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/beginner-course-1-9-introduction-to-automation/48589",
+      "metrics": {
+        "views": 30768,
+        "likes": 187,
+        "comments": 0,
+        "engagement_score": 14.11
+      }
+    },
+    {
+      "workflow": "I made an n8n Cheat Sheet!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/i-made-an-n8n-cheat-sheet/100548",
+      "metrics": {
+        "views": 20978,
+        "likes": 106,
+        "comments": 0,
+        "engagement_score": 13.68
+      }
+    },
+    {
+      "workflow": "Getting Data In & Out of Google Sheets with n8n (Simple Tutorial)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=gM1lMFfBgxk",
+      "metrics": {
+        "views": 15497,
+        "likes": 84,
+        "comments": 9,
+        "engagement_score": 12.58
+      }
+    },
+    {
+      "workflow": "N8n AI workflow maker",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/n8n-ai-workflow-maker/20143",
+      "metrics": {
+        "views": 18443,
+        "likes": 54,
+        "comments": 0,
+        "engagement_score": 10.57
+      }
+    },
+    {
+      "workflow": "Welcome to the n8n Community!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/welcome-to-the-n8n-community/7",
+      "metrics": {
+        "views": 15738,
+        "likes": 81,
+        "comments": 0,
+        "engagement_score": 10.48
+      }
+    },
+    {
+      "workflow": "Building the Ultimate RAG setup with Contextual Summaries, Sparse Vectors and Reranking",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/building-the-ultimate-rag-setup-with-contextual-summaries-sparse-vectors-and-reranking/54861",
+      "metrics": {
+        "views": 27825,
+        "likes": 75,
+        "comments": 0,
+        "engagement_score": 10.46
+      }
+    },
+    {
+      "workflow": "Announcing n8n version 2.0 - coming soon!",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/announcing-n8n-version-2-0-coming-soon/226475",
+      "metrics": {
+        "views": 103223,
+        "likes": 239,
+        "comments": 0,
+        "engagement_score": 8.35
+      }
+    },
+    {
+      "workflow": "How To Connect Discord To N8N (Bot Integration)",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=siV5Mpt2gaE",
+      "metrics": {
+        "views": 295,
+        "likes": 1,
+        "comments": 0,
+        "engagement_score": 6.78
+      }
+    },
+    {
+      "workflow": "How To Connect Discord To N8N (Bot Integration)",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=siV5Mpt2gaE",
+      "metrics": {
+        "views": 295,
+        "likes": 1,
+        "comments": 0,
+        "engagement_score": 6.78
+      }
+    },
+    {
+      "workflow": "Discord server #n8n bots #discord",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=l6yLdDTXxEw",
+      "metrics": {
+        "views": 3356,
+        "likes": 9,
+        "comments": 0,
+        "engagement_score": 5.36
+      }
+    },
+    {
+      "workflow": "Discord server #n8n bots #discord",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=l6yLdDTXxEw",
+      "metrics": {
+        "views": 3356,
+        "likes": 9,
+        "comments": 0,
+        "engagement_score": 5.36
+      }
+    },
+    {
+      "workflow": "README - Welcome to the n8n community",
+      "platform": "n8n Forum",
+      "country": "US",
+      "url": "https://community.n8n.io/t/readme-welcome-to-the-n8n-community/44381",
+      "metrics": {
+        "views": 47943,
+        "likes": 63,
+        "comments": 0,
+        "engagement_score": 3.25
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2026: How to Build AI Agents",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=TKnaDGpN7Ns",
+      "metrics": {
+        "views": 29003,
+        "likes": 0,
+        "comments": 19,
+        "engagement_score": 1.97
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2026: How to Build AI Agents",
+      "platform": "YouTube",
+      "country": "US",
+      "url": "https://youtube.com/watch?v=TKnaDGpN7Ns",
+      "metrics": {
+        "views": 29003,
+        "likes": 0,
+        "comments": 19,
+        "engagement_score": 1.97
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2026: How to Build AI Agents",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=TKnaDGpN7Ns",
+      "metrics": {
+        "views": 29003,
+        "likes": 0,
+        "comments": 19,
+        "engagement_score": 1.97
+      }
+    },
+    {
+      "workflow": "n8n Tutorial for Beginners 2026: How to Build AI Agents",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=TKnaDGpN7Ns",
+      "metrics": {
+        "views": 29003,
+        "likes": 0,
+        "comments": 19,
+        "engagement_score": 1.97
+      }
+    },
+    {
+      "workflow": "How to Use N8N for FREE - n8n Self Hosting Set Up Guide",
+      "platform": "YouTube",
+      "country": "IN",
+      "url": "https://youtube.com/watch?v=zqtx1Soeq5E",
+      "metrics": {
+        "views": 63388,
+        "likes": 0,
+        "comments": 23,
+        "engagement_score": 1.09
+      }
+    }
+  ]
+}
