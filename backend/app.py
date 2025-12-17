@@ -1,7 +1,7 @@
 """
 n8n Workflow Popularity System - FastAPI Backend
-Production-ready API with cron job support
-FIXED: YouTube API with better error handling
+Production-ready API with aggressive YouTube API key rotation
+FIXED: Better error handling and immediate key rotation
 """
 
 from fastapi import FastAPI, HTTPException, BackgroundTasks
@@ -16,6 +16,10 @@ from collections import defaultdict
 import os
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import logging
+from dotenv import load_dotenv
+from contextlib import asynccontextmanager
+
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -23,24 +27,6 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
-# Initialize FastAPI
-app = FastAPI(
-    title="n8n Workflow Popularity API",
-    description="Identifies the most popular n8n workflows across YouTube, Forums & Search Trends",
-    version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc"
-)
-
-# CORS Configuration
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Data Models
 class PopularityMetrics(BaseModel):
@@ -70,32 +56,130 @@ class WorkflowResponse(BaseModel):
     platforms: Dict[str, int]
     countries: Dict[str, int]
 
+# YouTube API Key Manager with Aggressive Rotation
+class YouTubeAPIKeyManager:
+    """Manages multiple YouTube API keys with immediate rotation on ANY error."""
+    
+    def __init__(self):
+        # Load all API keys from environment
+        self.api_keys: List[str] = []
+        
+        # Try to load keys from environment
+        for i in range(5):
+            key_name = f"YOUTUBE_API_KEY{i}" if i > 0 else "YOUTUBE_API_KEY"
+            key = os.getenv(key_name, "").strip()
+            if key:
+                self.api_keys.append(key)
+                logger.info(f"✅ Loaded {key_name}: {key[:20]}...")
+        
+        if not self.api_keys:
+            logger.error("❌ No YouTube API keys found in environment!")
+            logger.info("💡 Set keys in .env file: YOUTUBE_API_KEY, YOUTUBE_API_KEY1, etc.")
+        else:
+            logger.info(f"🔑 Total API keys loaded: {len(self.api_keys)}")
+        
+        self.current_key_index = 0
+        self.failed_keys = set()
+        self.successful_calls = {}  # Track successful calls per key
+        
+    def get_current_key(self) -> Optional[str]:
+        """Get the current active API key."""
+        if not self.api_keys:
+            return None
+        return self.api_keys[self.current_key_index]
+    
+    def get_key_by_index(self, index: int) -> Optional[str]:
+        """Get a specific key by index."""
+        if 0 <= index < len(self.api_keys):
+            return self.api_keys[index]
+        return None
+    
+    def mark_key_failed(self, index: int, reason: str = "quota"):
+        """Mark a key as failed."""
+        self.failed_keys.add(index)
+        logger.warning(f"❌ Key #{index + 1} marked as FAILED ({reason})")
+    
+    def rotate_to_next_available(self) -> bool:
+        """
+        Rotate to the next available API key.
+        Returns True if rotation successful, False if all keys exhausted.
+        """
+        if not self.api_keys:
+            return False
+        
+        # Mark current as failed
+        self.failed_keys.add(self.current_key_index)
+        
+        # Try all keys
+        for attempt in range(len(self.api_keys)):
+            self.current_key_index = (self.current_key_index + 1) % len(self.api_keys)
+            
+            if self.current_key_index not in self.failed_keys:
+                logger.info(f"🔄 Rotated to Key #{self.current_key_index + 1}/{len(self.api_keys)}")
+                return True
+        
+        # All keys exhausted
+        logger.error(f"❌ ALL {len(self.api_keys)} API KEYS EXHAUSTED!")
+        return False
+    
+    def has_available_keys(self) -> bool:
+        """Check if there are any available keys."""
+        return len(self.failed_keys) < len(self.api_keys)
+    
+    def reset_all(self):
+        """Reset all failed keys (daily reset)."""
+        self.failed_keys.clear()
+        self.current_key_index = 0
+        self.successful_calls.clear()
+        logger.info("🔄 All API keys reset for new day")
+    
+    def get_status(self) -> Dict:
+        """Get current status."""
+        available = len(self.api_keys) - len(self.failed_keys)
+        return {
+            "total_keys": len(self.api_keys),
+            "current_index": self.current_key_index + 1 if self.api_keys else 0,
+            "failed_keys": len(self.failed_keys),
+            "available_keys": available,
+            "all_exhausted": available == 0,
+            "successful_calls": self.successful_calls
+        }
+
+# Initialize API Key Manager
+youtube_api_manager = YouTubeAPIKeyManager()
+
 # In-memory storage
 workflow_cache = {
     "data": [],
     "last_updated": None,
-    "youtube_working": True
+    "youtube_working": len(youtube_api_manager.api_keys) > 0,
+    "youtube_workflows_collected": 0
 }
 
-# API Configuration
-YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
+# Configuration
 N8N_FORUM_URL = "https://community.n8n.io"
 
-# Validate API Key on startup
-if not YOUTUBE_API_KEY or YOUTUBE_API_KEY == "YOUR_YOUTUBE_API_KEY_HERE":
-    logger.warning("⚠️  YouTube API Key not set!")
-    workflow_cache["youtube_working"] = False
-
-# n8n workflow keywords
+# n8n workflow keywords (expanded for better coverage)
 N8N_WORKFLOW_KEYWORDS = [
-    "n8n automation", "n8n workflow", "n8n tutorial", "n8n integration",
-    "n8n slack", "n8n gmail", "n8n google sheets", "n8n webhook",
-    "n8n discord", "n8n chatgpt", "n8n openai", "n8n airtable",
-    "n8n notion", "n8n api", "n8n database"
+    "n8n automation tutorial",
+    "n8n workflow setup", 
+    "n8n integration guide",
+    "n8n slack automation",
+    "n8n gmail automation",
+    "n8n google sheets",
+    "n8n webhook tutorial",
+    "n8n discord bot",
+    "n8n chatgpt integration",
+    "n8n openai workflow",
+    "n8n airtable sync",
+    "n8n notion integration",
+    "n8n api automation",
+    "n8n database workflow",
+    "n8n crm automation"
 ]
 
 def calculate_engagement_score(metrics: Dict) -> float:
-    """Calculate overall engagement score"""
+    """Calculate overall engagement score."""
     views = metrics.get('views', 0) or 1
     likes = metrics.get('likes', 0)
     comments = metrics.get('comments', 0)
@@ -104,168 +188,208 @@ def calculate_engagement_score(metrics: Dict) -> float:
     engagement = ((likes * 2) + (comments * 3) + (replies * 3)) / views
     return round(engagement * 1000, 2)
 
-async def test_youtube_api_key() -> bool:
-    """Test if YouTube API key is valid"""
-    if not YOUTUBE_API_KEY:
-        return False
+async def make_youtube_request(client: httpx.AsyncClient, url: str, params: Dict, retry_count: int = 0) -> Optional[Dict]:
+    """
+    Make YouTube API request with automatic key rotation on failure.
+    Returns response data or None if all keys exhausted.
+    """
+    max_retries = len(youtube_api_manager.api_keys)
     
-    try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
-            test_url = "https://www.googleapis.com/youtube/v3/search"
-            params = {
-                "part": "snippet",
-                "q": "test",
-                "type": "video",
-                "maxResults": 1,
-                "key": YOUTUBE_API_KEY
-            }
-            response = await client.get(test_url, params=params)
+    while retry_count < max_retries:
+        current_key = youtube_api_manager.get_current_key()
+        
+        if not current_key:
+            logger.error("❌ No API key available!")
+            return None
+        
+        # Update params with current key
+        params['key'] = current_key
+        
+        try:
+            response = await client.get(url, params=params)
             
+            # SUCCESS!
             if response.status_code == 200:
-                logger.info("✅ YouTube API key is VALID and working!")
-                return True
+                key_idx = youtube_api_manager.current_key_index
+                youtube_api_manager.successful_calls[key_idx] = \
+                    youtube_api_manager.successful_calls.get(key_idx, 0) + 1
+                return response.json()
+            
+            # QUOTA EXCEEDED or other 403
             elif response.status_code == 403:
                 error_data = response.json()
-                error_msg = error_data.get('error', {}).get('message', 'Unknown error')
-                logger.error(f"❌ YouTube API Error 403: {error_msg}")
-                return False
+                error_msg = error_data.get('error', {}).get('message', '')
+                
+                logger.warning(f"⚠️ Key #{youtube_api_manager.current_key_index + 1} failed: {error_msg[:100]}")
+                
+                # Try next key
+                if youtube_api_manager.rotate_to_next_available():
+                    retry_count += 1
+                    await asyncio.sleep(0.5)  # Brief delay before retry
+                    continue
+                else:
+                    logger.error("❌ All keys exhausted!")
+                    return None
+            
+            # OTHER ERROR
             else:
-                logger.warning(f"⚠️ YouTube API returned status {response.status_code}")
-                return False
-    except Exception as e:
-        logger.error(f"❌ YouTube API test failed: {str(e)}")
-        return False
+                logger.warning(f"⚠️ YouTube API returned {response.status_code}")
+                # Try next key for any error
+                if youtube_api_manager.rotate_to_next_available():
+                    retry_count += 1
+                    await asyncio.sleep(0.5)
+                    continue
+                else:
+                    return None
+                    
+        except Exception as e:
+            logger.error(f"❌ Request error: {str(e)}")
+            # Try next key on exception too
+            if youtube_api_manager.rotate_to_next_available():
+                retry_count += 1
+                await asyncio.sleep(0.5)
+                continue
+            else:
+                return None
+    
+    logger.error(f"❌ Max retries ({max_retries}) exceeded")
+    return None
 
 async def fetch_youtube_workflows(country: str = "US") -> List[WorkflowData]:
-    """Fetch popular n8n workflow videos from YouTube with better error handling"""
+    """Fetch popular n8n workflow videos from YouTube with smart rotation."""
     workflows = []
     
-    # Skip if API key not configured or not working
-    if not workflow_cache["youtube_working"]:
-        logger.warning(f"⚠️ Skipping YouTube (API not available) for {country}")
+    if not youtube_api_manager.api_keys:
+        logger.warning(f"⚠️ No YouTube API keys configured")
         return workflows
+    
+    if not youtube_api_manager.has_available_keys():
+        logger.warning(f"⚠️ All YouTube keys exhausted for {country}")
+        return workflows
+    
+    logger.info(f"🔴 Starting YouTube fetch for {country} with {youtube_api_manager.get_status()['available_keys']} keys available")
     
     try:
         async with httpx.AsyncClient(timeout=30.0) as client:
-            successful_calls = 0
-            failed_calls = 0
+            successful_videos = 0
             
-            for keyword in N8N_WORKFLOW_KEYWORDS[:10]:  # Reduced to avoid quota issues
+            for keyword_idx, keyword in enumerate(N8N_WORKFLOW_KEYWORDS[:12]):  # Try more keywords
                 try:
+                    logger.info(f"   Searching: '{keyword}' ({keyword_idx + 1}/{12})")
+                    
                     # Search for videos
-                    search_url = "https://www.googleapis.com/youtube/v3/search"
                     search_params = {
                         "part": "snippet",
                         "q": keyword,
                         "type": "video",
-                        "maxResults": 3,  # Reduced from 5
+                        "maxResults": 5,
                         "regionCode": country,
-                        "key": YOUTUBE_API_KEY,
                         "order": "relevance"
                     }
                     
-                    search_response = await client.get(search_url, params=search_params)
+                    search_data = await make_youtube_request(
+                        client,
+                        "https://www.googleapis.com/youtube/v3/search",
+                        search_params
+                    )
                     
-                    if search_response.status_code == 403:
-                        error_data = search_response.json()
-                        error_msg = error_data.get('error', {}).get('message', '')
-                        
-                        if 'quota' in error_msg.lower():
-                            logger.error(f"❌ YouTube API quota exceeded! Will retry tomorrow.")
-                            workflow_cache["youtube_working"] = False
-                            break
-                        else:
-                            logger.error(f"❌ YouTube API 403: {error_msg}")
-                            workflow_cache["youtube_working"] = False
-                            break
-                    
-                    if search_response.status_code != 200:
-                        logger.warning(f"⚠️ YouTube search failed for '{keyword}': {search_response.status_code}")
-                        failed_calls += 1
+                    if not search_data:
+                        logger.warning(f"   ⚠️ No data for '{keyword}'")
                         continue
-                    
-                    search_data = search_response.json()
                     
                     if "items" not in search_data or not search_data["items"]:
                         continue
                     
-                    video_ids = [item["id"]["videoId"] for item in search_data["items"] if "videoId" in item["id"]]
+                    # Extract video IDs
+                    video_ids = [
+                        item["id"]["videoId"] 
+                        for item in search_data["items"] 
+                        if "videoId" in item.get("id", {})
+                    ]
                     
                     if not video_ids:
                         continue
                     
+                    logger.info(f"   Found {len(video_ids)} videos for '{keyword}'")
+                    
                     # Get video statistics
-                    stats_url = "https://www.googleapis.com/youtube/v3/videos"
                     stats_params = {
                         "part": "statistics,snippet",
-                        "id": ",".join(video_ids),
-                        "key": YOUTUBE_API_KEY
+                        "id": ",".join(video_ids)
                     }
                     
-                    stats_response = await client.get(stats_url, params=stats_params)
+                    stats_data = await make_youtube_request(
+                        client,
+                        "https://www.googleapis.com/youtube/v3/videos",
+                        stats_params
+                    )
                     
-                    if stats_response.status_code != 200:
-                        failed_calls += 1
+                    if not stats_data:
+                        logger.warning(f"   ⚠️ No stats for '{keyword}'")
                         continue
                     
-                    stats_data = stats_response.json()
-                    successful_calls += 1
-                    
+                    # Process videos
                     for video in stats_data.get("items", []):
-                        stats = video["statistics"]
-                        snippet = video["snippet"]
-                        
-                        views = int(stats.get("viewCount", 0))
-                        likes = int(stats.get("likeCount", 0))
-                        comments = int(stats.get("commentCount", 0))
-                        
-                        if views < 100:
+                        try:
+                            stats = video.get("statistics", {})
+                            snippet = video.get("snippet", {})
+                            
+                            views = int(stats.get("viewCount", 0))
+                            likes = int(stats.get("likeCount", 0))
+                            comments = int(stats.get("commentCount", 0))
+                            
+                            # Filter low-quality videos
+                            if views < 100:
+                                continue
+                            
+                            like_ratio = likes / views if views > 0 else 0
+                            comment_ratio = comments / views if views > 0 else 0
+                            
+                            metrics = PopularityMetrics(
+                                views=views,
+                                likes=likes,
+                                comments=comments,
+                                like_to_view_ratio=round(like_ratio, 4),
+                                comment_to_view_ratio=round(comment_ratio, 4),
+                                engagement_score=calculate_engagement_score({
+                                    "views": views,
+                                    "likes": likes,
+                                    "comments": comments
+                                })
+                            )
+                            
+                            workflow = WorkflowData(
+                                workflow=snippet.get("title", "Unknown")[:100],
+                                platform="YouTube",
+                                popularity_metrics=metrics,
+                                country=country,
+                                url=f"https://youtube.com/watch?v={video['id']}",
+                                last_updated=datetime.now().isoformat()
+                            )
+                            
+                            workflows.append(workflow)
+                            successful_videos += 1
+                            
+                        except Exception as e:
+                            logger.error(f"   ❌ Error processing video: {str(e)}")
                             continue
-                        
-                        like_ratio = likes / views if views > 0 else 0
-                        comment_ratio = comments / views if views > 0 else 0
-                        
-                        metrics = PopularityMetrics(
-                            views=views,
-                            likes=likes,
-                            comments=comments,
-                            like_to_view_ratio=round(like_ratio, 4),
-                            comment_to_view_ratio=round(comment_ratio, 4),
-                            engagement_score=calculate_engagement_score({
-                                "views": views,
-                                "likes": likes,
-                                "comments": comments
-                            })
-                        )
-                        
-                        workflow = WorkflowData(
-                            workflow=snippet["title"][:100],
-                            platform="YouTube",
-                            popularity_metrics=metrics,
-                            country=country,
-                            url=f"https://youtube.com/watch?v={video['id']}",
-                            last_updated=datetime.now().isoformat()
-                        )
-                        
-                        workflows.append(workflow)
                     
-                    # Rate limiting
-                    await asyncio.sleep(0.7)
+                    # Rate limiting between searches
+                    await asyncio.sleep(1.0)
                     
                 except Exception as e:
-                    logger.error(f"❌ Error fetching YouTube data for '{keyword}': {str(e)}")
-                    failed_calls += 1
+                    logger.error(f"   ❌ Error with keyword '{keyword}': {str(e)}")
                     continue
             
-            logger.info(f"✅ YouTube: {successful_calls} successful, {failed_calls} failed for {country}")
-    
+            logger.info(f"✅ YouTube {country}: Collected {successful_videos} videos")
+            
     except Exception as e:
-        logger.error(f"❌ YouTube API general error: {str(e)}")
+        logger.error(f"❌ YouTube error for {country}: {str(e)}")
     
     return workflows
 
 async def fetch_forum_workflows(country: str = "US") -> List[WorkflowData]:
-    """Fetch popular workflows from n8n community forum"""
+    """Fetch popular workflows from n8n community forum."""
     workflows = []
     
     try:
@@ -283,14 +407,6 @@ async def fetch_forum_workflows(country: str = "US") -> List[WorkflowData]:
             
             for topic_data in data.get("topic_list", {}).get("topics", [])[:30]:
                 try:
-                    topic_id = topic_data["id"]
-                    
-                    topic_url = f"{N8N_FORUM_URL}/t/{topic_id}.json"
-                    topic_response = await client.get(topic_url)
-                    
-                    if topic_response.status_code != 200:
-                        continue
-                    
                     views = topic_data.get("views", 0)
                     likes = topic_data.get("like_count", 0)
                     replies = topic_data.get("posts_count", 1) - 1
@@ -317,7 +433,7 @@ async def fetch_forum_workflows(country: str = "US") -> List[WorkflowData]:
                         platform="n8n Forum",
                         popularity_metrics=metrics,
                         country=country,
-                        url=f"{N8N_FORUM_URL}/t/{topic_data['slug']}/{topic_id}",
+                        url=f"{N8N_FORUM_URL}/t/{topic_data['slug']}/{topic_data['id']}",
                         last_updated=datetime.now().isoformat()
                     )
                     
@@ -334,7 +450,7 @@ async def fetch_forum_workflows(country: str = "US") -> List[WorkflowData]:
     return workflows
 
 async def fetch_search_trends(country: str = "US") -> List[WorkflowData]:
-    """Generate workflow data based on search trends"""
+    """Generate workflow data based on search trends."""
     workflows = []
     
     search_trends = [
@@ -379,94 +495,172 @@ async def fetch_search_trends(country: str = "US") -> List[WorkflowData]:
     return workflows
 
 async def collect_all_workflows():
-    """Collect workflows from all sources"""
-    logger.info("=" * 60)
-    logger.info("🚀 Starting workflow collection...")
-    logger.info("=" * 60)
+    """Collect workflows from all sources."""
+    logger.info("=" * 70)
+    logger.info("🚀 STARTING WORKFLOW COLLECTION")
+    logger.info("=" * 70)
     
     all_workflows = []
     countries = ["US", "IN"]
     
-    # Test YouTube API before collecting
-    if workflow_cache["youtube_working"] and YOUTUBE_API_KEY:
-        youtube_test = await test_youtube_api_key()
-        workflow_cache["youtube_working"] = youtube_test
+    # Show API key status
+    status = youtube_api_manager.get_status()
+    logger.info(f"🔑 YouTube API Status: {status['available_keys']}/{status['total_keys']} keys available")
     
     for country in countries:
         logger.info(f"\n📍 Collecting workflows for {country}...")
         
         # YouTube
-        logger.info(f"   🔴 Fetching from YouTube...")
         youtube_workflows = await fetch_youtube_workflows(country)
         all_workflows.extend(youtube_workflows)
-        logger.info(f"   ✅ Collected {len(youtube_workflows)} YouTube workflows")
+        logger.info(f"   ✅ YouTube: {len(youtube_workflows)} workflows")
         
-        # Forum (fetch once)
+        # Forum (once for US only)
         if country == "US":
-            logger.info(f"   🟢 Fetching from n8n Forum...")
             forum_workflows = await fetch_forum_workflows(country)
             all_workflows.extend(forum_workflows)
-            logger.info(f"   ✅ Collected {len(forum_workflows)} forum workflows")
+            logger.info(f"   ✅ Forum: {len(forum_workflows)} workflows")
         
         # Search trends
-        logger.info(f"   🔵 Fetching search trends...")
         search_workflows = await fetch_search_trends(country)
         all_workflows.extend(search_workflows)
-        logger.info(f"   ✅ Collected {len(search_workflows)} search trend workflows")
+        logger.info(f"   ✅ Search: {len(search_workflows)} workflows")
     
+    # Sort by engagement
     all_workflows.sort(key=lambda x: x.popularity_metrics.engagement_score, reverse=True)
     
+    # Update cache
     workflow_cache["data"] = all_workflows
     workflow_cache["last_updated"] = datetime.now().isoformat()
+    workflow_cache["youtube_workflows_collected"] = len([w for w in all_workflows if w.platform == "YouTube"])
     
-    logger.info("\n" + "=" * 60)
-    logger.info(f"🎉 TOTAL WORKFLOWS COLLECTED: {len(all_workflows)}")
-    logger.info(f"📊 Target: 50+ | Actual: {len(all_workflows)} | Status: {'✅ PASS' if len(all_workflows) >= 50 else '❌ FAIL'}")
-    logger.info(f"🔑 YouTube Status: {'✅ Working' if workflow_cache['youtube_working'] else '❌ Quota Exceeded / Invalid Key'}")
-    logger.info("=" * 60)
+    # Final status
+    status = youtube_api_manager.get_status()
+    youtube_count = workflow_cache["youtube_workflows_collected"]
+    
+    logger.info("\n" + "=" * 70)
+    logger.info(f"🎉 COLLECTION COMPLETE")
+    logger.info(f"📊 Total Workflows: {len(all_workflows)}")
+    logger.info(f"   - YouTube: {youtube_count}")
+    logger.info(f"   - Forum: {len([w for w in all_workflows if w.platform == 'n8n Forum'])}")
+    logger.info(f"   - Search: {len([w for w in all_workflows if w.platform == 'Google Search'])}")
+    logger.info(f"🎯 Target: 50+ | Status: {'✅ PASS' if len(all_workflows) >= 50 else '❌ FAIL'}")
+    logger.info(f"🔑 API Keys Used: {len(status['successful_calls'])} keys made successful calls")
+    logger.info("=" * 70)
     
     return all_workflows
+
+# Lifespan event handler (replaces deprecated on_event)
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Manage application lifespan."""
+    # Startup
+    logger.info("=" * 70)
+    logger.info("🚀 STARTING n8n WORKFLOW POPULARITY API")
+    logger.info("=" * 70)
+    logger.info(f"📅 Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"🔑 YouTube Keys: {len(youtube_api_manager.api_keys)}")
+    
+    # Initial data collection
+    await collect_all_workflows()
+    
+    # Start scheduler
+    scheduler = AsyncIOScheduler()
+    
+    scheduler.add_job(
+        collect_all_workflows,
+        'cron',
+        hour=2,
+        minute=0,
+        id='daily_workflow_sync'
+    )
+    
+    scheduler.add_job(
+        youtube_api_manager.reset_all,
+        'cron',
+        hour=0,
+        minute=0,
+        id='daily_api_reset'
+    )
+    
+    scheduler.start()
+    logger.info("⏰ Scheduler started: Daily sync at 2 AM, Key reset at midnight")
+    logger.info("=" * 70)
+    
+    yield
+    
+    # Shutdown
+    scheduler.shutdown()
+    logger.info("🛑 API shutting down...")
+
+# Initialize FastAPI with lifespan
+app = FastAPI(
+    title="n8n Workflow Popularity API",
+    description="Identifies the most popular n8n workflows across YouTube, Forums & Search Trends",
+    version="2.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    lifespan=lifespan
+)
+
+# CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # API Endpoints
 @app.get("/")
 async def root():
-    """API root endpoint"""
+    """API root endpoint."""
+    status = youtube_api_manager.get_status()
     return {
         "message": "🚀 n8n Workflow Popularity API",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "status": "running",
-        "youtube_status": "working" if workflow_cache["youtube_working"] else "quota_exceeded",
+        "youtube_api": {
+            "total_keys": status["total_keys"],
+            "available": status["available_keys"],
+            "current": status["current_index"],
+            "exhausted": status["all_exhausted"]
+        },
+        "workflows_cached": len(workflow_cache["data"]),
         "endpoints": {
             "/": "This page",
             "/api/workflows": "Get all workflows",
-            "/api/stats": "Get statistics",
-            "/api/sync": "Trigger sync",
+            "/api/stats": "Statistics",
             "/api/health": "Health check",
-            "/keep-alive": "Keep alive endpoint",
+            "/api/youtube-status": "YouTube API status",
             "/docs": "API documentation"
         }
     }
 
 @app.get("/api/health")
 async def health_check():
-    """Health check endpoint"""
+    """Health check."""
+    status = youtube_api_manager.get_status()
     return {
         "status": "healthy",
         "timestamp": datetime.now().isoformat(),
-        "youtube_api_configured": bool(YOUTUBE_API_KEY),
-        "youtube_api_working": workflow_cache["youtube_working"],
-        "workflows_cached": len(workflow_cache["data"]),
-        "last_sync": workflow_cache["last_updated"] or "Never"
+        "youtube_api": status,
+        "workflows": {
+            "total": len(workflow_cache["data"]),
+            "youtube": workflow_cache["youtube_workflows_collected"],
+            "last_sync": workflow_cache["last_updated"] or "Never"
+        }
     }
 
-@app.get("/keep-alive")
-async def keep_alive():
-    """Keep-alive endpoint for monitoring"""
+@app.get("/api/youtube-status")
+async def youtube_status():
+    """YouTube API detailed status."""
+    status = youtube_api_manager.get_status()
     return {
-        "status": "alive",
         "timestamp": datetime.now().isoformat(),
-        "workflows": len(workflow_cache["data"]),
-        "youtube_working": workflow_cache["youtube_working"]
+        "keys": status,
+        "workflows_collected": workflow_cache["youtube_workflows_collected"]
     }
 
 @app.get("/api/workflows", response_model=WorkflowResponse)
@@ -475,8 +669,7 @@ async def get_workflows(
     country: Optional[str] = None,
     limit: Optional[int] = None
 ):
-    """Get all workflows with optional filters"""
-    
+    """Get workflows with optional filters."""
     if not workflow_cache["data"]:
         await collect_all_workflows()
     
@@ -508,22 +701,18 @@ async def get_workflows(
 
 @app.post("/api/sync")
 async def trigger_sync(background_tasks: BackgroundTasks):
-    """Manually trigger data synchronization"""
+    """Manually trigger sync."""
     background_tasks.add_task(collect_all_workflows)
     return {
-        "message": "Data synchronization started",
-        "status": "processing",
-        "youtube_status": "working" if workflow_cache["youtube_working"] else "quota_exceeded"
+        "message": "Sync started",
+        "status": "processing"
     }
 
 @app.get("/api/stats")
 async def get_statistics():
-    """Get system statistics"""
+    """Get statistics."""
     if not workflow_cache["data"]:
-        return {
-            "message": "No data available",
-            "total_workflows": 0
-        }
+        return {"message": "No data", "total_workflows": 0}
     
     workflows = workflow_cache["data"]
     
@@ -538,53 +727,18 @@ async def get_statistics():
     
     for platform in platform_stats:
         count = platform_stats[platform]["count"]
-        platform_stats[platform]["avg_engagement"] = round(
-            platform_stats[platform]["avg_engagement"] / count, 2
-        )
+        if count > 0:
+            platform_stats[platform]["avg_engagement"] = round(
+                platform_stats[platform]["avg_engagement"] / count, 2
+            )
     
     return {
         "total_workflows": len(workflows),
         "last_updated": workflow_cache["last_updated"],
         "platforms": dict(platform_stats),
         "countries": dict(country_stats),
-        "top_workflow": workflows[0].workflow if workflows else None,
-        "youtube_status": "working" if workflow_cache["youtube_working"] else "quota_exceeded"
+        "top_workflow": workflows[0].workflow if workflows else None
     }
-
-# Scheduler
-scheduler = AsyncIOScheduler()
-
-@app.on_event("startup")
-async def startup_event():
-    """Run on application startup"""
-    logger.info("=" * 60)
-    logger.info("🚀 Starting n8n Workflow Popularity API...")
-    logger.info("=" * 60)
-    logger.info(f"📅 Current time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"🔑 YouTube API Key configured: {bool(YOUTUBE_API_KEY)}")
-    logger.info(f"🌐 n8n Forum URL: {N8N_FORUM_URL}")
-    
-    await collect_all_workflows()
-    
-    scheduler.add_job(
-        collect_all_workflows,
-        'cron',
-        hour=2,
-        minute=0,
-        id='daily_workflow_sync'
-    )
-    
-    scheduler.start()
-    logger.info("\n⏰ Scheduler started - Daily sync at 2:00 AM")
-    logger.info("=" * 60)
-    logger.info("✅ API is ready! Visit /docs for interactive documentation")
-    logger.info("=" * 60)
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    """Run on application shutdown"""
-    scheduler.shutdown()
-    logger.info("🛑 API shutting down...")
 
 if __name__ == "__main__":
     import uvicorn
